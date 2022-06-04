@@ -7,28 +7,32 @@ import java.util.Scanner;
 
 
 /**
- * @author
+ * @author LosPibes2.0
  *
  */
 public class Calculator {	
-//CHECKSTYLE:OFF
+    /**
+    * @author LosPibes2.0
+    * @param args
+    */
 	public static void main(String[] args) {
-//CHECKSTYLE:ON
+
 		Scanner reader = new Scanner(System.in);
 		
         System.out.print("1. +\n2. -\n3. *\n4. /\nEnter an operator: ");
         
         char operator = reader.nextLine().charAt(0);
-        double First;
+        double first;
         double second;
         String input;
         
         while (true) {
+
         	System.out.print("Enter first number: ");
         	input = reader.nextLine();
         	
             try {
-            	First=Integer.parseInt(input);
+            	first=Integer.parseInt(input);
                 break;
             } catch (NumberFormatException e) {
                 System.out.println("Not valid!");
@@ -36,6 +40,7 @@ public class Calculator {
         }
         
         while (true) {
+
         	System.out.print("Enter second number: ");
         	input = reader.nextLine();
         	
@@ -48,13 +53,21 @@ public class Calculator {
         }
 
         Calculator cal=new Calculator();
-        String result=cal.Operation(First,second,operator);
+        String result=cal.operation(first,second,operator);
 
         System.out.printf(result);
 		reader.close();
 	}
 
-	private String Operation(double first,double second,char operator) {
+    /**
+    * @author LosPibes2.0
+    * @param first
+    * @param second
+    * @param operator
+    * @return result 
+    *
+     */
+	private String operation(double first,double second,char operator) {
 		double result = 0;
 		switch(operator)
         {
