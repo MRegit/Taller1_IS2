@@ -1,6 +1,5 @@
-//
-//
-
+// Copyright (C) 2020
+// All rights reserved
 package labcodingstandards;
 
 import java.util.Scanner;
@@ -53,7 +52,7 @@ public class Calculator {
         }
 
         Calculator cal=new Calculator();
-        String result=cal.operation(first,second,operator);
+        String result=cal.operation(first, second, operator);
 
         System.out.printf(result);
 		reader.close();
@@ -67,7 +66,7 @@ public class Calculator {
     * @return result 
     *
      */
-	private String operation(double first,double second,char operator) {
+	private String operation(double first, double second, char operator) {
 		double result = 0;
 		switch(operator)
         {
